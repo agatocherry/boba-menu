@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Boba menu</title>
@@ -17,7 +18,7 @@
             h3 {
                 font-family: "Quicksand", sans-serif;
             }
-            a {
+            nav {
                 font-family: "Caveat", cursive;
                 font-size: 25px;
                 color: black;
@@ -25,30 +26,121 @@
             }
             hr {
                 width: 50%;
-                border: 1px dashed rgb(253, 155, 155);
+                border: 1px dashed #DE254A;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            span {
+                font-size: 19px;
+                font-family: "Caveat", cursive;
+                color: gray
+            }
+            form {
+                font-family: "Quicksand", sans-serif;
+                font-size: 17px;
             }
         </style>
         <link rel="icon" href="https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/1024px/1f9cb.png" type="image/png">
     </head>
-    <body>
+    <body style="background-color: #FEE6EB;">
         <header><center>
-            <h1>Boba menu</h1>
+            <h1 style="color: #DE254A;">Boba menu</h1>
+            <img id="header-img" src="img/logo.png" alt="Boba Menu Logo" width="75">
+            <br><br>
             <nav>
                 <a href="index.html">Home</a> •
                 <a href="#menu">Menu</a> •
-                <a href="#about">About</a>
+                <a href="#order">Order</a>
             </nav>
-        <br><hr />
-        </center>
-    </header>
+            <br><hr />
+            </center>
+        </header>
     <center><h2 id="menu">Menu</h2></center>
-    <h3>Boba tea</h3>
-    <h3>Boba coffee</h3>
+    <div style="display: flex; text-align: center;">
+        <div style="background-color: #ffd4dc; border: 1px dashed #DE254A; padding: 10px; border-radius: 7px; width: 50%; padding: 20px; margin-left: 60px; margin-right: 60px;" value="tea">
+            <h3>Boba tea</h3>
+            <div style="text-align: left">
+                <ul>
+                    <li><article>
+                        <p>Jasmine tea</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Lychee oolong tea</p>
+                        <p><em><span>Lychee bobas - $4.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Strawberry hibiscus</p>
+                        <p><em><span>Cherry bobas - $4.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Matcha latte</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                </ul>
+            </div>
+        </div>
+        <div style="background-color: #ffd4dc; border: 1px dashed #DE254A; padding: 10px; border-radius: 7px; width: 50%; padding: 20px; margin-left: 60px; margin-right: 60px;" value="coffee">
+            <h3>Boba coffee</h3>
+            <div style="text-align: left">
+                <ul>
+                    <li><article>
+                        <p>Caramel latte</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Iced coffee latte</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Mocha latte</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                    <li><article>
+                        <p>Vanilla latte</p>
+                        <p><em><span>Tapioca pearls - $5.50</span></em></p>
+                    </article></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <span style="color: black; margin-left: 60px; margin-right: 60px;">
+        You can add extra toppings: cream, whipped cream, or ice cream.
+    </span>
+    <br><br>
     <br><hr />
-    <center><h2 id="about">About</h2></center>
+    <center><h2 id="order">Order</h2>
+    <form action="order.html" method="GET">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="drink">Drink:</label>
+        <select id="drink" name="drink" required>
+            <option value="jasmine">Jasmine green tea</option>
+            <option value="lychee">Lychee oolong tea</option>
+            <option value="strawberry">Strawberry hibiscus</option>
+            <option value="matcha">Matcha latte</option>
+            <option value="caramel">Caramel latte</option>
+            <option value="iced">Iced coffee latte</option>
+            <option value="mocha">Mocha latte</option>
+            <option value="vanilla">Vanilla latte</option>
+        </select><br><br>
+        <label for="topping">Topping:</label><br>
+        <input type="checkbox" id="cream" name="cream" value="cream">
+        <label for="cream">Cream</label><br>
+        <input type="checkbox" id="whipped" name="whipped" value="whipped">
+        <label for="whipped">Whipped cream</label><br>
+        <input type="checkbox" id="ice" name="ice" value="ice">
+        <label for="ice">Ice cream</label><br><br>
+        <textarea id="special" name="special" rows="4" cols="26" placeholder="Any special requests?"></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form></center>
+    <br>
+    <center><img src="img/boba.gif" style="border-radius: 7px;"></center>
     <br><hr />
     <footer>
-        <center><p>Made with ❤️ by agatocherry</p></center>
+        <center><p>Made with ❤️ by <i><a href="https://linktr.ee/agatocherry">agatocherry</a></i></p></center>
         </footer>
     </body>
 </html>
